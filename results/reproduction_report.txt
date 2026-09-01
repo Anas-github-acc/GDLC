@@ -1,0 +1,89 @@
+==========================================================
+ GDLC REPRODUCTION REPORT -- Group 24
+ Paper : A Generalized Deep Learning Clustering Algorithm
+         Based on Non-Negative Matrix Factorization
+         Wang, Li, Deng, Zhang, Huang, Zhang, Liu -- ACM TKDD 2023
+ Code  : https://github.com/Code706/GDLC (Code706)
+ Run at: 02-Sep-2026 03:53:53
+==========================================================
+
+Configuration: original GDLC, fixed learning rate, generalized
+bias enabled, 10 rounds, fixed RNG seed rand('twister',5489).
+
+----------------------------------------------------------
+DATASET: BASEHOCK
+----------------------------------------------------------
+  Metric      Paper       Reproduced   AbsDiff    %Diff
+  ACC         0.991       0.990968     0.000032   0.0032
+  NMI         0.935       0.934585     0.000415   0.0444
+  Runtime(s)  23.80       23.8072     
+
+  Additional metrics (this study, not reported in the paper):
+    ARI       0.964182
+    Purity    0.990968
+
+  Per-round progression:
+    Round   ACC        NMI        Objective
+    1       0.971400   0.831456   600.659664
+    2       0.984947   0.901939   575.472893
+    3       0.990968   0.934585   575.382655
+    4       0.990968   0.934585   575.388601
+    5       0.990968   0.934585   575.377202
+    6       0.990968   0.934585   575.372499
+    7       0.990968   0.934585   575.371134
+    8       0.990968   0.934585   575.370777
+    9       0.990968   0.934585   575.370687
+    10      0.990968   0.934585   575.370665
+
+----------------------------------------------------------
+DATASET: PCMAC
+----------------------------------------------------------
+  Metric      Paper       Reproduced   AbsDiff    %Diff
+  ACC         1.000       0.999485     0.000515   0.0515
+  NMI         1.000       0.994142     0.005858   0.5858
+  Runtime(s)  15.60       15.2032     
+
+  Additional metrics (this study, not reported in the paper):
+    ARI       0.997941
+    Purity    0.999485
+
+  Per-round progression:
+    Round   ACC        NMI        Objective
+    1       0.977355   0.861712   508.679405
+    2       0.993309   0.948535   487.220323
+    3       0.999485   0.994141   486.079118
+    4       1.000000   1.000000   485.906193
+    5       1.000000   1.000000   485.872872
+    6       0.999485   0.994142   485.866054
+    7       0.999485   0.994142   485.864596
+    8       0.999485   0.994142   485.864269
+    9       0.999485   0.994142   485.864193
+    10      0.999485   0.994142   485.864174
+
+----------------------------------------------------------
+DATASET: SMK_CAN_187
+----------------------------------------------------------
+  Metric      Paper       Reproduced   AbsDiff    %Diff
+  ACC         0.995       0.994652     0.000348   0.0349
+  NMI         0.957       0.957009     0.000009   0.0010
+  Runtime(s)  9.20        11.1099     
+
+  Additional metrics (this study, not reported in the paper):
+    ARI       0.978609
+    Purity    0.994652
+
+  Per-round progression:
+    Round   ACC        NMI        Objective
+    1       0.967914   0.826261   38.043218
+    2       0.994652   0.957009   35.275285
+    3       0.994652   0.957009   35.144759
+    4       0.994652   0.957009   35.138276
+    5       0.994652   0.957009   35.137951
+    6       0.994652   0.957009   35.137935
+    7       0.994652   0.957009   35.137934
+    8       0.994652   0.957009   35.137934
+    9       0.994652   0.957009   35.137934
+    10      0.994652   0.957009   35.137934
+
+Note: paper values are reference values transcribed from the
+publication.  Reproduced values were produced by this script.
